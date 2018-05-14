@@ -1,20 +1,31 @@
 /*global $*/
 
-// FADING ELEMENTS (ANIMATION)
+// SHOW, HIDE, TOGGLE FUNCTIONS
 
 $(document).ready(function(){
     // function complete() {
     //     alert('animation is finished');
     // }
-    $("section > h2").on("click", function(event){ // flashing or strobe effect
-        $(this).fadeTo(200, 0.2)
-               .fadeTo(200, 1.0)
-               .fadeTo(200, 0.2)
-               .fadeTo(200, 1.0)
-               .fadeTo(200, 0.2)
-               .fadeTo(200, 1.0);
+    $("img[alt=map]").on("click", function(){ 
+        $("section > h2").toggle(400); // like css display:none;
     });
 });
+
+// FADING ELEMENTS (ANIMATION)
+
+// $(document).ready(function(){
+//     // function complete() {
+//     //     alert('animation is finished');
+//     // }
+//     $("section > h2").on("click", function(event){ // flashing or strobe effect
+//         $(this).fadeTo(200, 0.2)
+//               .fadeTo(200, 1.0)
+//               .fadeTo(200, 0.2)
+//               .fadeTo(200, 1.0)
+//               .fadeTo(200, 0.2)
+//               .fadeTo(200, 1.0);
+//     });
+// });
 
 // JQUERY ANIMATION
 
