@@ -1,20 +1,42 @@
 /*global $*/
 
+$(document).ready(function(){
+   
+    var allQuotes = $("blockquote");
+    var currentQuote = 0;
+   
+    function changeQuote() {
+        $(allQuotes[currentQuote]).fadeOut(400, function(){
+            if(currentQuote == allQuotes.length - 1){
+                currentQuote = 0;
+            } else {
+                currentQuote++;
+            }
+        
+            $(allQuotes[currentQuote]).fadeIn(400);
+        });
+
+    }
+    
+    var quoteTimer = setInterval(changeQuote, 3000);
+    
+});    
+
 // SLIDING ELEMENTS
 
-$(document).ready(function(){
+// $(document).ready(function(){
     
-    $(".slide-button-up").on("click", function(){ 
-        $("#lead-banner").slideUp(400);
-    });
-    $(".slide-button-down").on("click", function(){ 
-        $("#lead-banner").slideDown(400);
-    });
-    // $(".slide-button-up").on("click", function(){ 
-    //     $("#lead-banner").slideToggle(400); will toggle up or down on same button
-    // });
+//     $(".slide-button-up").on("click", function(){ 
+//         $("#lead-banner").slideUp(400);
+//     });
+//     $(".slide-button-down").on("click", function(){ 
+//         $("#lead-banner").slideDown(400);
+//     });
+//     // $(".slide-button-up").on("click", function(){ 
+//     //     $("#lead-banner").slideToggle(400); will toggle up or down on same button
+//     // });
     
-});
+// });
 
 // SHOW, HIDE, TOGGLE FUNCTIONS
 
