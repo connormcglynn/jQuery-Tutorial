@@ -1,5 +1,19 @@
 /*global $*/
 
+
+
+// JQUERY EVENT OBJECT
+
+$(document).ready(function(){
+    $("*").on("click", function(event){
+        console.log(event.target);
+        console.log("event type is: " + event.type);
+        console.log("x-coordinate of event is: " + event.pageX);
+        console.log("y-coordinate of event is: " + event.pageY);
+        event.stopPropagation(); // stops bubbling up to parent elements
+    });
+});
+
 // DOCUMENT READY & WINDOW LOAD EVENTS
 
 $(function(){
