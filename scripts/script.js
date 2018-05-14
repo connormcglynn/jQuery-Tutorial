@@ -1,16 +1,24 @@
 /*global $*/
 
-// SLIDING ANIMATION -- CLICK TO EXPAND
+// PLUGINS
 
 $(document).ready(function(){
     
-    var items = $("#points-of-sale li");
-    
-    items.on('click', function(){
-       $(this).find("p").slideToggle(400); 
-    });
+    $(".rslides").responsiveSlides();
 
 }); 
+
+// SLIDING ANIMATION -- CLICK TO EXPAND
+
+// $(document).ready(function(){
+    
+//     var items = $("#points-of-sale li");
+    
+//     items.on('click', function(){
+//       $(this).find("p").slideToggle(400); 
+//     });
+
+// }); 
 
 // QUOTE FADER
 
