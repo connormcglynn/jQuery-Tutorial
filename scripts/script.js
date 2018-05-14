@@ -1,26 +1,40 @@
 /*global $*/
 
-$(document).ready(function(){
-   
-    var allQuotes = $("blockquote");
-    var currentQuote = 0;
-   
-    function changeQuote() {
-        $(allQuotes[currentQuote]).fadeOut(400, function(){
-            if(currentQuote == allQuotes.length - 1){
-                currentQuote = 0;
-            } else {
-                currentQuote++;
-            }
-        
-            $(allQuotes[currentQuote]).fadeIn(400);
-        });
+// SLIDING ANIMATION -- CLICK TO EXPAND
 
-    }
+$(document).ready(function(){
     
-    var quoteTimer = setInterval(changeQuote, 3000);
+    var items = $("#points-of-sale li");
     
-});    
+    items.on('click', function(){
+       $(this).find("p").slideToggle(400); 
+    });
+
+}); 
+
+// QUOTE FADER
+
+// $(document).ready(function(){
+   
+//     var allQuotes = $("blockquote");
+//     var currentQuote = 0;
+   
+//     function changeQuote() {
+//         $(allQuotes[currentQuote]).fadeOut(400, function(){
+//             if(currentQuote == allQuotes.length - 1){
+//                 currentQuote = 0;
+//             } else {
+//                 currentQuote++;
+//             }
+        
+//             $(allQuotes[currentQuote]).fadeIn(400);
+//         });
+
+//     }
+    
+//     var quoteTimer = setInterval(changeQuote, 3000);
+    
+// });    
 
 // SLIDING ELEMENTS
 
@@ -78,47 +92,47 @@ $(document).ready(function(){
 
 // JQUERY EVENT OBJECT
 
-$(document).ready(function(){
-    $("*").on("click", function(event){
-        console.log(event.target);
-        console.log("event type is: " + event.type);
-        console.log("x-coordinate of event is: " + event.pageX);
-        console.log("y-coordinate of event is: " + event.pageY);
-        event.stopPropagation(); // stops bubbling up to parent elements
-    });
-});
+// $(document).ready(function(){
+//     $("*").on("click", function(event){
+//         console.log(event.target);
+//         console.log("event type is: " + event.type);
+//         console.log("x-coordinate of event is: " + event.pageX);
+//         console.log("y-coordinate of event is: " + event.pageY);
+//         event.stopPropagation(); // stops bubbling up to parent elements
+//     });
+// });
 
 // DOCUMENT READY & WINDOW LOAD EVENTS
 
-$(function(){
-    // waits for webpage elements to load, irrespective of content
-});
-// is the same as: $("document").ready(function(){ });
-// or $("document").on("ready", function(){});
+// $(function(){
+//     // waits for webpage elements to load, irrespective of content
+// });
+// // is the same as: $("document").ready(function(){ });
+// // or $("document").on("ready", function(){});
 
-$(window).on("load", function(){
-    // waits for whole webpage to load, not just elements -- images, scripts, resources etc
-});
-// is the same as $(window).load(function(){});
+// $(window).on("load", function(){
+//     // waits for whole webpage to load, not just elements -- images, scripts, resources etc
+// });
+// // is the same as $(window).load(function(){});
 
 
 
 
 // EVENT HELPERS --- "METHODS"
 
-$("#lead-banner").dblclick(function(){
-    alert('you double clicked me');
-    $("#lead-banner").off("dblclick")
-});
+// $("#lead-banner").dblclick(function(){
+//     alert('you double clicked me');
+//     $("#lead-banner").off("dblclick")
+// });
 
 // BINDING AND UNBINDING
 
-var lis = $("#points-of-sale li");
+// var lis = $("#points-of-sale li");
 
-lis.on("click", function(){
-    $(this).css({"background" : "pink"});
-    lis.off("click");
-});
+// lis.on("click", function(){
+//     $(this).css({"background" : "pink"});
+//     lis.off("click");
+// });
 
 
 // on() - binds an event to matched element(s)
@@ -126,9 +140,9 @@ lis.on("click", function(){
 
 // TOGGLE ON/OFF 
 
-var button = $("#lead-banner a");
+// var button = $("#lead-banner a");
 
-button[0].onclick = function() {
-    $("#points-of-sale").toggleClass("open");
-    return false;
-}
+// button[0].onclick = function() {
+//     $("#points-of-sale").toggleClass("open");
+//     return false;
+// }
