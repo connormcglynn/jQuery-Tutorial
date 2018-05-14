@@ -1,5 +1,25 @@
 /*global $*/
 
+// FINAL LESSON -- WHAT NEXT?
+
+// Check out jQuery UI for: 
+
+// Datepickers
+// Draggable elements
+// Sortable elements
+// Resizeable elements
+// Sliders, Tooltips, Expandable Lists, Image galleries
+
+// jQuery with AJAX (Asynchronous Javascript and XML)
+//   -- communicate with a serve and load data into a page without refreshing
+//   -- i.e. Google maps, traffic updates, stock tickers, real time data etc
+  
+// jQuery plugins 
+//   -- other great plugins available
+//   -- create your own plugins 
+  
+  
+
 // PLUGINS
 
 $(document).ready(function(){
