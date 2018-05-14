@@ -1,15 +1,14 @@
 /*global $*/
 
-// CONTROLLING / CHANGING CSS
+// WORKING WITH CLASSES
 
-// console.log($("#social-nav").css("top")); // checking value
+var button = $("#lead-banner a");
 
+button[0].onclick = function() {
+    $("#points-of-sale").toggleClass("open");
+    return false;
+}
 
-
-$("#social-nav").css({
-    "top" : "-400px",
-    "left" : "150px",
-    "opacity" : "0.5",
-    "border-top" : "4px solid red"
-    
-}); // changing value
+// removeClass() - removes a class from the matched element(s)
+// addClass() - adds a class to the matched element(s)
+// toggleClass() - toggles the class on and off on their matched element(s)
