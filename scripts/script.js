@@ -1,6 +1,15 @@
 /*global $*/
 
+// JQUERY ANIMATION
 
+$(document).ready(function(){
+    function complete() {
+        alert('animation is finished');
+    }
+    $("section > h2").on("click", function(event){
+        $(this).animate({"width" : "500px", "height" : "100px"}, 1000, "swing", complete);
+    });
+});
 
 // JQUERY EVENT OBJECT
 
