@@ -1,12 +1,13 @@
 /*global $*/
-$("#contact-methods").next().css({border: "3px solid red"});
 
-$("#social-nav").prev().css({border: "3px solid blue"});
+// Chaining // shouldn't be too long, but good for a few changes. If multiple changes needed, return and indent at .next / .prev / .closest etc: 
 
-$(".banner-title").parents().css({border: "3px solid pink"});
+// LIKE THIS
 
-$("#social-nav").children().css({border: "3px solid green"});
+$("#contact-methods").css({border: "2px solid red"}).next().css({border: "2px solid green"}).closest("section").css({border: "2px solid blue"});
 
-$("#contact").find(".facebook").css({border: "3px solid purple"});
+// OR LIKE THIS FOR LONGER STATEMENTS
 
-$("#social-nav").closest(".wrapper").css({border: "3px solid orange"});
+$("#contact-methods").css({border: "2px solid red"})
+    .next().css({border: "2px solid green"})
+    .closest("section").css({border: "2px solid blue"});
