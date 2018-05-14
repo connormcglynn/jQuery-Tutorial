@@ -1,5 +1,21 @@
 /*global $*/
 
+// DOCUMENT READY & WINDOW LOAD EVENTS
+
+$(function(){
+    // waits for webpage elements to load, irrespective of content
+});
+// is the same as: $("document").ready(function(){ });
+// or $("document").on("ready", function(){});
+
+$(window).on("load", function(){
+    // waits for whole webpage to load, not just elements -- images, scripts, resources etc
+});
+// is the same as $(window).load(function(){});
+
+
+
+
 // EVENT HELPERS --- "METHODS"
 
 $("#lead-banner").dblclick(function(){
