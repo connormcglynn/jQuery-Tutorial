@@ -1,15 +1,31 @@
 /*global $*/
 
-// JQUERY ANIMATION
+// FADING ELEMENTS (ANIMATION)
 
 $(document).ready(function(){
-    function complete() {
-        alert('animation is finished');
-    }
-    $("section > h2").on("click", function(event){
-        $(this).animate({"width" : "500px", "height" : "100px"}, 1000, "swing", complete);
+    // function complete() {
+    //     alert('animation is finished');
+    // }
+    $("section > h2").on("click", function(event){ // flashing or strobe effect
+        $(this).fadeTo(200, 0.2)
+               .fadeTo(200, 1.0)
+               .fadeTo(200, 0.2)
+               .fadeTo(200, 1.0)
+               .fadeTo(200, 0.2)
+               .fadeTo(200, 1.0);
     });
 });
+
+// JQUERY ANIMATION
+
+// $(document).ready(function(){
+//     function complete() {
+//         alert('animation is finished');
+//     }
+//     $("section > h2").on("click", function(event){
+//         $(this).animate({"width" : "500px", "height" : "100px"}, 1000, "swing", complete);
+//     });
+// });
 
 // JQUERY EVENT OBJECT
 
