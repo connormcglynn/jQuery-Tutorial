@@ -1,5 +1,12 @@
 /*global $*/
 
+// EVENT HELPERS --- "METHODS"
+
+$("#lead-banner").dblclick(function(){
+    alert('you double clicked me');
+    $("#lead-banner").off("dblclick")
+});
+
 // BINDING AND UNBINDING
 
 var lis = $("#points-of-sale li");
