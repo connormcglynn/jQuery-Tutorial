@@ -1,15 +1,31 @@
 /*global $*/
 
-// SHOW, HIDE, TOGGLE FUNCTIONS
+// SLIDING ELEMENTS
 
 $(document).ready(function(){
-    // function complete() {
-    //     alert('animation is finished');
-    // }
-    $("img[alt=map]").on("click", function(){ 
-        $("section > h2").toggle(400); // like css display:none;
+    
+    $(".slide-button-up").on("click", function(){ 
+        $("#lead-banner").slideUp(400);
     });
+    $(".slide-button-down").on("click", function(){ 
+        $("#lead-banner").slideDown(400);
+    });
+    // $(".slide-button-up").on("click", function(){ 
+    //     $("#lead-banner").slideToggle(400); will toggle up or down on same button
+    // });
+    
 });
+
+// SHOW, HIDE, TOGGLE FUNCTIONS
+
+// $(document).ready(function(){
+//     // function complete() {
+//     //     alert('animation is finished');
+//     // }
+//     $("img[alt=map]").on("click", function(){ 
+//         $("section > h2").toggle(400); // like css display:none;
+//     });
+// });
 
 // FADING ELEMENTS (ANIMATION)
 
